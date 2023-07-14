@@ -17,11 +17,13 @@
 }
 header .h_wrap{
   max-width: 1200px;
+  height: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
+  padding-top:50px;
+  box-sizing: border-box;
 }
 #header .m_inner{
   display: none;
@@ -30,7 +32,6 @@ header .h_wrap{
 /* 헤더 로고 */
 header .logo{
   width: 14.5%;
-  text-align: center;
 }
 header .logo a{
   width: 100%;
@@ -390,14 +391,16 @@ footer .contact{
 }
 
 /* 푸터 슬라이드 */
-.contact .fSlide{
+.contact .fSlideWrap{
   width:60%;
   position: relative;
   margin-top: 130px;
 }
+.fSlideWrap .fSlide{
+  width: 100%;
+}
 .fSlide .swiper-slide{
   width: 100%;
-  height: 100%;
 }
 .fSlide .swiper-slide p{
   display: none;
@@ -408,13 +411,19 @@ footer .contact{
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  height: 100%;
   text-align: center;
   display: block;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   font: 800 1.2rem/100vh var(--basicFont);  
   animation: fade .3s;
 }
+.fSlide .swiper-slide:hover img{
+  border-radius: 50%;
+  transition: all .3s;
+}
+
 @keyframes fade{
   0%{opacity: 0;}
   100%{opacity: 1;}
@@ -422,7 +431,7 @@ footer .contact{
 .fSlide .swiper-slide img{
   width: 100%;
   object-fit: contain;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 

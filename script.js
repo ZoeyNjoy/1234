@@ -126,12 +126,14 @@ popup.forEach(function(i){
     e.preventDefault()
     this.nextElementSibling.style.display='block';
     document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    $('#header').removeClass('fixed');      
   })
 });
 popupClose.forEach(function(i){
   i.addEventListener('click',function(){
     this.style.display='none'
     document.getElementsByTagName('body')[0].style.overflow = 'visible';
+    $('#header').addClass('fixed');
   })
 });
 
@@ -140,12 +142,12 @@ popupClose.forEach(function(i){
 const footSlide = new Swiper('.fSlide', {
   breakpoints: {
     1024: {
-      slidesPerView: '4',
+      slidesPerView: 4,
       spaceBetween: 10
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 20
+      slidesPerView: 3,
+      spaceBetween: 10,
     },
     640: {
       slidesPerView: 1,
