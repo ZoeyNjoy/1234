@@ -27,5 +27,5 @@ a{
   --boldFont:'Gasoek One', sans-serif;
   --ti-cursor-font-family:'Noto Sans KR', sans-serif;
   --ti-cursor-font-size:1.5rem;
-  --ti-cursor-transform:rotate(90deg) translate(12px, -25px);
+  --ti-cursor-transform:rotate(90deg) translate(12px, -20px);
 }

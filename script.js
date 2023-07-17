@@ -53,30 +53,35 @@ $(function(){
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
+          animate: 2000,
 			})
 			$('.cAi').easyPieChart({
 					barColor:"#f8a522",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
+          animate: 2000,
 			})
 			$('.cHtml').easyPieChart({
 					barColor:"#3bb6ea",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
+          animate: 2000,
 			})
 			$('.cCss').easyPieChart({
 					barColor:"#f6c223",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
+          animate: 2000,
 			})
 			$('.cJs').easyPieChart({
 					barColor:"#8dd62f",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
+          animate: 2000,
 			})
 		}
 	})
