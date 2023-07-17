@@ -85,133 +85,85 @@ main .skill{
 .works .cate{
   width: calc(100% - 48px);
 }
-.cate a{
-  display: block;
-  margin-right: 50px;
-  font: 700 1.3rem/3em var(--basicFont);
-}
-.cate a.active{
-  font: 900 1.5rem/2.5em var(--basicFont);
-  letter-spacing: 6px;
-  transition: all .3s;
-}
 .works .menu_list{
   width: calc(100% - 48px);
 }
-.menu_list .worksMenu{
+
+
+
+/* footer */
+footer{
   width: 100%;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: wrap;
-  opacity: 1;
-  justify-content: space-between;
-}
-.worksMenu .worksList{
-  width: 32%;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-.worksMenu .worksList a{
-  width: 100%;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  overflow: hidden;
-  z-index: 20;
-}
-.worksMenu .worksList a img{
-  width: 100%;
-  object-fit: cover;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
-/* works hover */
-.worksMenu .worksList a:hover::before{
-  content: '';
-  display: block;
+/* 끝인사 */
+footer .contact{
+  width: calc(100% - 48px);
+}
+.contact .fCon{
+  width: 100%;
+}
+.contact .fCon p{
+  margin-left: 0;
+}
+
+/* 푸터 슬라이드 */
+.contact .fSlideWrap{
+  width:60%;
+  position: relative;
+  margin-top: 0px;
+  margin-left: 40%;
+}
+.fSlideWrap .fSlide{
+  width: 100%;
+}
+.fSlide .swiper-slide{
+  width: 100%;
+}
+.fSlide .swiper-slide p{
+  display: none;
+}
+.fSlide .swiper-slide:hover p{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  z-index: 200;
+  text-align: center;
+  display: block;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font: 800 1.2rem/100vh var(--basicFont);  
+  animation: fade .3s;
 }
-.worksMenu .worksList a:hover img{
-  opacity: 0.5;
-  transform: scale(1.1);
-  filter: blur(3px);
+.fSlide .swiper-slide:hover img{
+  border-radius: 50%;
   transition: all .3s;
 }
-.worksMenu .worksList a .txt{
+
+@keyframes fade{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+.fSlide .swiper-slide img{
   width: 100%;
-  display: none;
-  position: relative;
-  z-index: 10;
+  object-fit: contain;
+  border-radius: 15px;
 }
-.worksMenu .worksList a:hover .txt{
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-.worksMenu .worksList a:hover .txt ul{
-  width: 100%;
-  display: inline-block;
-}
-.worksMenu .worksList a:hover .txt ul::before{
-  content: '';
-  display: block;
-  margin-top: 15%;
-}
-.worksMenu .worksList a:hover .txt li{
-  width: 100%;
+
+
+
+footer .fBottom{
   text-align: center;
-  font: 500 1.2rem/1.5em var(--basicFont);
-  margin-bottom: 0;
-  color: #fff;
-  text-shadow: 0 0 8px #000;
+  margin-top: 100px;
 }
-
-
-/* full */
-.worksMenu .design .full{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 200;
+.fBottom p{
+  font: 300 1.3rem/1.5em var(--basicFont);  
 }
-.worksMenu .design .full .cont{
-  width: 50%;
-  height: 80%;
-  overflow-y: scroll;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index:20;
-  animation:  infinite;
+.fBottom p:nth-of-type(2){
+  margin-top: 20px;
+  font: 300 .9rem/1.2em var(--basicFont);
 }
-.worksMenu .design .full .cont img{
-  width: 100%;
-}
-.worksMenu .design .full .cont::after{
-  content: '';
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  z-index: 30;
-  background: url(./image/close.svg);
-  display: block;
-  cursor: pointer;
-}
-
