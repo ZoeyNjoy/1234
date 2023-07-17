@@ -127,33 +127,28 @@ footer .contact{
 }
 .fSlide .swiper-slide:hover p{
   position: absolute;
-  top: 50%;
+  box-sizing: border-box;
+  top: 48.6%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
   text-align: center;
   display: block;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.8);
-  font: 800 1.2rem/100vh var(--basicFont);  
+  font: 800 1.2rem var(--basicFont);  
   animation: fade .3s;
 }
-.fSlide .swiper-slide:hover img{
-  border-radius: 50%;
-  transition: all .3s;
+.fSlide .swiper-slide:hover p::before{
+  content: '';
+  display: block;
+  margin-top: 42%;
 }
-
-@keyframes fade{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+.fSlide .swiper-slide:hover p::after{
+  content: '';
+  display: block;
+  margin-bottom: 42%;
 }
-.fSlide .swiper-slide img{
-  width: 100%;
-  object-fit: contain;
-  border-radius: 15px;
-}
-
 
 
 footer .fBottom{
