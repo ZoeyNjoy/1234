@@ -8,7 +8,20 @@ $(function(){
     }else{
       $('#header').removeClass('fixed');      
     }
-
+    
+  });
+  $('.m_nav').hide();
+  $(".bar").on('click', function () {
+    $(this).next().slideToggle();
+  });
+  
+  var burger = $('.bar');
+  burger.each(function(index){
+    var $this = $(this);
+    $this.on('click', function(e){
+      e.preventDefault();
+      $(this).toggleClass('active');
+    })
   });
 
   
@@ -39,9 +52,24 @@ $(function(){
   });
 
 
-  //타자
-  new TypeIt('.typing')
-  .pause(1000).go();      
+  let observer = new IntersectionObserver((e)=>{
+    e.forEach((typing)=>{
+      if(typing.isIntersecting){
+        typing.target.style.opacity=1;
+      //타자
+        new TypeIt('.typing')
+        .pause(1000).go();      
+      }else{
+        typing.target.style.opacity=0;
+      }
+    })
+  });
+  
+  let typing = document.querySelectorAll('.typing')
+  observer.observe(typing[0])
+
+
+
 
 
   //차트
@@ -53,39 +81,40 @@ $(function(){
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
-          animate: 2000,
 			})
 			$('.cAi').easyPieChart({
 					barColor:"#f8a522",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
-          animate: 2000,
 			})
 			$('.cHtml').easyPieChart({
 					barColor:"#3bb6ea",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
-          animate: 2000,
 			})
 			$('.cCss').easyPieChart({
 					barColor:"#f6c223",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
-          animate: 2000,
 			})
 			$('.cJs').easyPieChart({
 					barColor:"#8dd62f",
 					scaleColor:false,
 					lineCap: "square",
 					lineWidth:10,
-          animate: 2000,
 			})
 		}
+
 	})
 
+  ScrollOut({
+    onShown : ()=>{
+    }
+
+  });
 
   //탭게시물
 setTimeout(function(){
@@ -176,6 +205,8 @@ const footSlide = new Swiper('.fSlide', {
     clickable: true,
   },
 });
+
+
 
 
 });

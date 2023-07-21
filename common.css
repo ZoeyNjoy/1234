@@ -29,3 +29,33 @@ a{
   --ti-cursor-font-size:1.5rem;
   --ti-cursor-transform:rotate(90deg) translate(12px, -20px);
 }
+[data-scroll] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateY(30%) ;
+  transition: all 1s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
+
+@keyframes fade1{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fade2{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}

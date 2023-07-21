@@ -24,6 +24,7 @@ header .h_wrap{
   align-items: center;
   padding-top:50px;
   box-sizing: border-box;
+  position: relative;
 }
 #header .m_inner{
   display: none;
@@ -32,6 +33,7 @@ header .h_wrap{
 /* 헤더 로고 */
 header .logo{
   width: 14.5%;
+  z-index: 200;
 }
 header .logo a{
   width: 100%;
@@ -94,7 +96,7 @@ main .home::after{
   background: linear-gradient( to bottom, #ffffff00, #ffffff00, #ffffff00,  #fff );
 }
 .home .hello{
-  width: 50%;
+  width: 60%;
   position:absolute;
   top: 50%;
   left: 150px;
@@ -109,7 +111,12 @@ main .home::after{
 .tit1 p{
   margin-right: 5px;
 }
-.tit2 p span{
+.tit2{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tit2 .point{
+
   font: 100 5rem/1em var(--boldFont);
   margin-right: 15px;
 }
@@ -438,12 +445,12 @@ footer .contact{
 .fSlide .swiper-slide:hover p::before{
   content: '';
   display: block;
-  margin-top: 40.5%;
+  margin-top: 42%;
 }
 .fSlide .swiper-slide:hover p::after{
   content: '';
   display: block;
-  margin-bottom: 40.5%;
+  margin-bottom: 42%;
 }
 .fSlide .swiper-slide:hover img{
   border-radius: 50%;

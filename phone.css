@@ -1,0 +1,100 @@
+/* 헤더 */
+header .h_wrap{
+  width: calc(100% - 32px);
+}
+.h_wrap nav{
+  display: none;
+}
+
+/* 모바일메뉴 */
+#header .m_inner{
+  display: block;
+}
+
+/* 햄버거바 */
+header .bar{
+  display: block;
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  z-index: 100;
+  bottom:0%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.bar,
+.bar span{
+display: inline-block;
+transition: all .4s;
+box-sizing: border-box;
+}
+.bar span{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 4px;
+}
+.bar span:nth-of-type(1){
+  top: 0;
+}
+.bar span:nth-of-type(2){
+  top: 25%;
+  width: 60%;
+}
+.bar span:nth-of-type(3){
+  top: 50%;
+}
+.bar span:nth-of-type(4){
+  top: 75%;
+  width: 60%;
+}
+.bar span:nth-of-type(5){
+  top: 100%;
+}
+.bar.active span:nth-of-type(1){
+  -webkit-transform: translateY(15px) rotate(-45deg);
+  transform: translateY(15px) rotate(-45deg);
+}
+.bar.active span:nth-of-type(2){
+  opacity: 0;
+}
+.bar.active span:nth-of-type(3){  
+  opacity: 0;
+}
+.bar.active span:nth-of-type(4){
+  opacity: 0;
+}
+.bar.active span:nth-of-type(5){
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  transform: translateY(-15px) rotate(45deg);
+}
+
+/* 모바일 메뉴 */
+.m_inner .depth02{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 35vh;
+  background-color: white;
+  padding-top: 120px;
+}
+.depth02 ul{
+  width: 100%;
+}
+.depth02 li{
+  text-align: center;
+  font:500 1.3rem/3em var(--basicFont);
+}
+
+/* home */
+.home .hello{
+  width: 80%;
+  min-width: 320px;
+  top: 70%;
+  left: 50px;
+  font: 100 3rem/1em var(--boldFont);
+}
