@@ -116,7 +116,6 @@ main .home::after{
   flex-wrap: wrap;
 }
 .tit2 .point{
-
   font: 100 5rem/1em var(--boldFont);
   margin-right: 15px;
 }

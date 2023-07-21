@@ -25,7 +25,8 @@ main .home{
   left: 100px;
   font: 100 3rem/1em var(--boldFont);
 }
-.tit2 p span{
+
+.tit2 .point{
   width: 100%;
   font: 100 5rem/1.5em var(--boldFont);
 }
@@ -61,7 +62,7 @@ main .home{
 /* skill */
 main .skill{
   width: 100%;
-  margin-top: 300px;
+  margin-top: 150px;
 }
 .skill section{
   width: calc(100% - 48px);
@@ -76,13 +77,20 @@ main .skill{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: translate(-50%, -50%) scale(1.2);
   box-sizing: border-box;
 }
 
 
 
 /* works */
+main .works{
+  margin-top: 250px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+  background-color: var(--bgColor);
+}
 .works .cate{
   width: calc(100% - 48px);
 }
