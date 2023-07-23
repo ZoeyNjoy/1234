@@ -100,6 +100,75 @@ main .works{
 
 
 
+
+
+/* works */
+main .works{
+  width: 100%;
+  margin-top: 300px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  box-sizing: border-box;
+  background-color: var(--bgColor);
+}
+.works .cate{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.cate a{
+  display: block;
+  margin-right: 50px;
+  font: 700 1.3rem/3em var(--basicFont);
+}
+.cate a.active{
+  font: 900 1.5rem/2.5em var(--basicFont);
+  letter-spacing: 6px;
+  transition: all .3s;
+}
+.works .menu_list{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.menu_list .worksMenu{
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 1;
+  justify-content: space-between;
+}
+.worksMenu .worksList{
+  width: 48%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+
+.all .worksMenu .worksList{
+  display: none;
+}
+.all #btn{
+  display: block;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font: 100 1.2rem/3em var(--boldFont);
+  background-color: var(--whiteColor);
+}
+.all #btn:hover{
+  color: var(--whiteColor);
+  background-color: var(--pointColor);
+  transition: all .2s;
+}
+
+
+
+
 /* footer */
 footer{
   width: 100%;

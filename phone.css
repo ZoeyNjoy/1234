@@ -137,6 +137,8 @@ main .about{
   top: -30px;
 }
 .right .typing{
+  width: 80%;
+  margin: auto;
   font: 500 2.5rem var(--boldFont);
   margin-bottom: 50px;
   text-align: center;
@@ -209,11 +211,6 @@ main .works{
   margin-right: 0px;
   font: 700 1.3rem/3em var(--basicFont);
 }
-.cate a.active{
-  font: 900 1.5rem/2.5em var(--basicFont);
-  letter-spacing: 6px;
-  transition: all .3s;
-}
 .works .menu_list{
   width: calc(100% - 32px);
   min-width: 320px;
@@ -225,20 +222,6 @@ main .works{
   width: 48%;
   margin-bottom: 30px;
   overflow: hidden;
-}
-.worksMenu .worksList a{
-  width: 100%;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  overflow: hidden;
-  z-index: 20;
-}
-.worksMenu .worksList a img{
-  width: 100%;
-  object-fit: cover;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
 }
 
 
@@ -256,6 +239,7 @@ main .works{
 .all #btn:hover{
   color: var(--whiteColor);
   background-color: var(--pointColor);
+  transition: all .2s;
 }
 
 /* works hover */
