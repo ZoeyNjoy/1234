@@ -399,6 +399,7 @@ footer .contact{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
 }
 .contact .fCon{
   width: 40%;
