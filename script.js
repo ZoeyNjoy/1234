@@ -126,6 +126,7 @@ setTimeout(function(){
 $('main .works').each(function(){
   var tab = $(this).find(".cate a");
   var cont = $(this).find('.worksMenu');
+  var btn = $(this).find('#btn');
 
   tab.click(function(){
     var ind=$(this).index();
@@ -141,10 +142,20 @@ $('main .works').each(function(){
         duration:200
       }));
     cont.hide();
+    btn.hide();
     cont.eq(ind).show();
+    btn.eq(ind).show();
   });
 });
 
+  $(".all .worksMenu .worksList").slice(0, 6).show(); // 초기갯수
+    $("#btn").click(function(e){ // 클릭시 more
+      e.preventDefault();
+      $(".worksList:hidden").slice(0, 2).show(); // 클릭시 more 갯수 지저정
+      if($(".worksList:hidden").length == 0){ // 컨텐츠 남아있는지 확인
+          alert("게시물의 끝입니다."); // 컨텐츠 없을시 alert 창 띄우기 
+      }
+    });
 
 
 

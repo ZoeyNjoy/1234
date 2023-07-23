@@ -20,9 +20,10 @@ a{
   color: inherit;
 }
 :root{
+  --whiteColor:#fff;
   --fontColor:#000;
   --bgColor:#f1ecf5;
-  --pointColor:#18b4fe;
+  --pointColor:#ba93e1;
   --basicFont:'Noto Sans KR', sans-serif;
   --boldFont:'Gasoek One', sans-serif;
   --ti-cursor-font-family:'Noto Sans KR', sans-serif;

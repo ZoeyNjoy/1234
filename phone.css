@@ -1,6 +1,7 @@
 /* 헤더 */
 header .h_wrap{
   width: calc(100% - 32px);
+  min-width: 320px;
 }
 .h_wrap nav{
   display: none;
@@ -14,7 +15,7 @@ header .h_wrap{
 /* 햄버거바 */
 header .bar{
   display: block;
-  width: 50px;
+  width: 40px;
   height: 30px;
   position: absolute;
   z-index: 100;
@@ -30,7 +31,7 @@ box-sizing: border-box;
 }
 .bar span{
   position: absolute;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 3px;
   background-color: #333;
@@ -97,8 +98,223 @@ box-sizing: border-box;
   min-width: 320px;
   top: 70%;
   left: 50px;
-  font: 100 3rem/1em var(--boldFont);
+  font: 100 2.5rem/1em var(--boldFont);
 }
 .tit2 .point{
   width: 100%;
+  font: 100 4rem/1em var(--boldFont);
 }
+
+/* about */
+main .about{
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 300px;
+}
+.about section{
+  width: calc(100% - 32px);
+  min-width: 320px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 0;
+}
+.about section .left{
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+.left img{
+  width: 100%;
+  object-fit: cover;
+}
+.about section .right{
+  width: 100%;
+  position: relative;
+  top: -30px;
+}
+.right .typing{
+  font: 500 2.5rem var(--boldFont);
+  margin-bottom: 50px;
+  text-align: center;
+}
+.right .int {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+}
+
+/* skill */
+main .skill{
+  width: 100%;
+  margin-top: 250px;
+}
+.skill section{
+  width: calc(100% - 32px);
+  min-width: 320px;
+}
+.skill section .chart{
+  width: 50%;
+  margin-bottom: 100px;
+}
+.chart canvas{
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.3);
+} 
+.chart canvas:nth-of-type(1){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+.chart:nth-of-type(5){
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+/* works */
+main .works{
+  width: 100%;
+  margin-top: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  background-color: var(--bgColor);
+}
+.works .cate{
+  width: calc(100% - 32px);
+  min-width: 320px;
+  margin: auto;
+  display: flex;
+}
+.cate a{
+  width: 25%;
+  text-align: center;
+  display: block;
+  margin-right: 0px;
+  font: 700 1.3rem/3em var(--basicFont);
+}
+.cate a.active{
+  font: 900 1.5rem/2.5em var(--basicFont);
+  letter-spacing: 6px;
+  transition: all .3s;
+}
+.works .menu_list{
+  width: calc(100% - 32px);
+  min-width: 320px;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+}
+.worksMenu .worksList{
+  width: 48%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.worksMenu .worksList a{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 20;
+}
+.worksMenu .worksList a img{
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+
+.all .worksMenu .worksList{
+  display: none;
+}
+.all #btn{
+  display: block;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font: 100 1.2rem/3em var(--boldFont);
+  background-color: var(--whiteColor);
+}
+.all #btn:hover{
+  color: var(--whiteColor);
+  background-color: var(--pointColor);
+  transition: all .3s;
+}
+
+/* works hover */
+.worksMenu .worksList a:hover::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+.worksMenu .worksList a:hover img{
+  opacity: 0.5;
+  transform: scale(1.1);
+  filter: blur(3px);
+  transition: all .3s;
+}
+.worksMenu .worksList a .txt{
+  width: 100%;
+  display: none;
+  position: relative;
+  z-index: 10;
+}
+.worksMenu .worksList a:hover .txt{
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.worksMenu .worksList a:hover .txt ul{
+  width: 100%;
+  display: inline-block;
+}
+.worksMenu .worksList a:hover .txt ul::before{
+  content: '';
+  display: block;
+  margin-top: 15%;
+}
+.worksMenu .worksList a:hover .txt li{
+  width: 100%;
+  text-align: center;
+  font: 500 1.2rem/1.5em var(--basicFont);
+  margin-bottom: 0;
+  color: var(--whiteColor);
+  text-shadow: 0 0 8px #000;
+}
+
+
+/* full */
+.worksMenu .design .full .cont{
+  width: 70%;
+  height: 70%;
+  overflow-y: scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:20;
+  animation:  infinite;
+}
+
+

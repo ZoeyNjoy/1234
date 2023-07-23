@@ -93,7 +93,7 @@ main .home::after{
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient( to bottom, #ffffff00, #ffffff00, #ffffff00,  #fff );
+  background: linear-gradient( to bottom, var(--whiteColor)fff00, var(--whiteColor)fff00, var(--whiteColor)fff00,  var(--whiteColor) );
 }
 .home .hello{
   width: 60%;
@@ -261,6 +261,7 @@ main .works{
   max-width: 1200px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 .menu_list .worksMenu{
@@ -291,6 +292,8 @@ main .works{
   border: 1px solid #bbb;
   box-sizing: border-box;
 }
+
+.all #btn{display: none;}
 
 /* works hover */
 .worksMenu .worksList a:hover::before{
@@ -338,7 +341,7 @@ main .works{
   text-align: center;
   font: 500 1.2rem/1.5em var(--basicFont);
   margin-bottom: 0;
-  color: #fff;
+  color: var(--whiteColor);
   text-shadow: 0 0 8px #000;
 }
 
