@@ -147,6 +147,12 @@ main .about{
   height: 100%;
   position: relative;
 }
+.right .int::after{
+  content: '';
+  display: block;
+  margin-top: 25%;
+}
+
 
 /* skill */
 main .skill{
@@ -250,7 +256,6 @@ main .works{
 .all #btn:hover{
   color: var(--whiteColor);
   background-color: var(--pointColor);
-  transition: all .3s;
 }
 
 /* works hover */
