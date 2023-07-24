@@ -27,6 +27,16 @@ $(function(){
   
   // intro anime
   anime({
+    targets: '.logo a',
+    translateY:[0,35],
+    // opacity:anime.stagger(0),
+    // delay:anime.stagger(50),
+    direction:'alternate',
+    easing: 'easeInExpo',
+    duration:1500,
+    loop:true
+  });
+  anime({
     targets: '.home .mscl',
     translateY: [-25, 0],
     opacity:[0, 1],
