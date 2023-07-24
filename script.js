@@ -28,12 +28,13 @@ $(function(){
   // intro anime
   anime({
     targets: '.logo a',
-    translateY:[0,35],
-    // opacity:anime.stagger(0),
-    // delay:anime.stagger(50),
+    keyframes: [
+      {translateY: 0,
+        duration:300,},
+      {translateY: 35},
+    ],
     direction:'alternate',
     easing: 'easeInExpo',
-    duration:1500,
     loop:true
   });
   anime({
@@ -225,6 +226,11 @@ const footSlide = new Swiper('.fSlide', {
     el: ".swiper-pagination",
     clickable: true,
   },
+});
+
+$('.conts').hide();
+$(".btn").on('click', function () {
+  $(this).next().slideToggle();
 });
 
 
