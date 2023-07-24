@@ -10,6 +10,7 @@ $(function(){
     }
     
   });
+  
   $('.m_nav').hide();
   $(".bar").on('click', function () {
     $(this).next().slideToggle();
@@ -228,10 +229,6 @@ const footSlide = new Swiper('.fSlide', {
   },
 });
 
-$('.conts').hide();
-$(".btn").on('click', function () {
-  $(this).next().slideToggle();
-});
 
 
 

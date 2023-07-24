@@ -23,13 +23,13 @@ header .bar{
   right: 16px;
   transform: translateY(-50%);
 }
-.bar,
-.bar span{
+header .bar,
+header .bar span{
 display: inline-block;
 transition: all .4s;
 box-sizing: border-box;
 }
-.bar span{
+header .bar span{
   position: absolute;
   right: 0;
   width: 100%;
@@ -37,37 +37,37 @@ box-sizing: border-box;
   background-color: #333;
   border-radius: 4px;
 }
-.bar span:nth-of-type(1){
+header .bar span:nth-of-type(1){
   top: 0;
 }
-.bar span:nth-of-type(2){
+header .bar span:nth-of-type(2){
   top: 25%;
   width: 60%;
 }
-.bar span:nth-of-type(3){
+header .bar span:nth-of-type(3){
   top: 50%;
 }
-.bar span:nth-of-type(4){
+header .bar span:nth-of-type(4){
   top: 75%;
   width: 60%;
 }
-.bar span:nth-of-type(5){
+header .bar span:nth-of-type(5){
   top: 100%;
 }
-.bar.active span:nth-of-type(1){
+header .bar.active span:nth-of-type(1){
   -webkit-transform: translateY(15px) rotate(-45deg);
   transform: translateY(15px) rotate(-45deg);
 }
-.bar.active span:nth-of-type(2){
+header .bar.active span:nth-of-type(2){
   opacity: 0;
 }
-.bar.active span:nth-of-type(3){  
+header .bar.active span:nth-of-type(3){  
   opacity: 0;
 }
-.bar.active span:nth-of-type(4){
+header .bar.active span:nth-of-type(4){
   opacity: 0;
 }
-.bar.active span:nth-of-type(5){
+header .bar.active span:nth-of-type(5){
   -webkit-transform: translateY(-15px) rotate(45deg);
   transform: translateY(-15px) rotate(45deg);
 }
@@ -313,4 +313,119 @@ footer .fBottom{
 .fBottom p:nth-of-type(2){
   margin-top: 20px;
   font: 300 .9rem/1.2em var(--basicFont);
+}
+
+
+
+
+/*------------------ 서브페이지 ------------------*/
+
+/* 서브헤더 */
+.headerwrap .nav{
+  width: calc(100% - 32px);
+  min-width: 320px;
+}
+.headerwrap .logo{
+  width: 25%;
+}
+/* 서브메인 */
+.mainwrap{
+  width: 100%;
+}
+/* 서브메인 소개 */
+.mainwrap section{
+  width: calc(100% - 32px);
+  min-width: 320px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 0;
+  padding: 200px 0 100px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+}
+/* 서브소개 이미지 */
+.mainwrap section .left{
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+.mainwrap section .left img{
+  width: 100%;
+  object-fit: cover;
+}
+/* 서브소개 자소서부분 */
+.mainwrap section .right{
+  width: 100%;
+  position: relative;
+  top: -30px;
+}
+.mainwrap section .right h1{
+  width: 80%;
+  margin: auto;
+  font: 500 2.5rem var(--boldFont);
+  margin-bottom: 50px;
+  text-align: center;
+}
+.mainwrap section .right ul{
+  width: 80%;
+  margin: auto;
+}
+.mainwrap section .right li{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font: 300 1.3rem/2em var(--basicFont);
+}
+.mainwrap section .right li span{
+  width: 25%;
+  display: block;
+}
+.mainwrap section .right li .small{
+  width: 75%;
+  margin-left: 25%;
+  font: 400 1rem/2em var(--basicFont);
+}
+
+/* 서브경력 */
+.mainwrap section:nth-of-type(2) li,
+.mainwrap section:nth-of-type(3) li{
+  margin-left: 0;
+  margin-bottom: 50px;
+}
+.mainwrap section:nth-of-type(2) h2,
+.mainwrap section:nth-of-type(3) h2{
+  width: 100%;
+  font: 500 1.3rem/2em var(--basicFont);
+}
+.mainwrap section:nth-of-type(2) p,
+.mainwrap section:nth-of-type(3) p{
+  width: 100%;
+  font: 500 1.3rem/1.5em var(--basicFont);  
+}
+.mainwrap section:nth-of-type(2) .txt{
+  width: 100%;
+  margin-left: 0%;
+  font: 300 1rem/1.5em var(--basicFont);
+}
+
+.mainwrap section:nth-of-type(3) li p span{
+  font: 300 1rem/1em var(--basicFont);
+  color: #aaa;
+}
+
+
+
+
+
+
+.slidewrap{
+  width: 100%;
+  margin: auto;
+}
+.slidewrap .slide{
+  width: calc(100% - 32px);
+  min-width: 320px;
 }
