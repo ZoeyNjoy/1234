@@ -245,7 +245,7 @@ main .works{
 
 /* full */
 .worksMenu .design .full .cont{
-  width: 70%;
+  width: 80%;
   height: 70%;
   overflow-y: scroll;
   position: fixed;
