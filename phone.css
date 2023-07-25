@@ -285,14 +285,13 @@ footer .contact{
 /* 푸터 슬라이드 */
 .contact .fSlideWrap{
   width:50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: auto;
+  margin-top: 0px;
 }
 .contact .fSlideWrap::before{
   content: '';
   display: block;
-  margin-top: 60%;
+  margin-top: 20%;
 }
 .fSlide .swiper-slide p{
   display: none;
@@ -311,16 +310,14 @@ footer .contact{
 
 
 footer .fBottom{
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+  width: calc(100% - 32px);
+  margin: auto;
+  margin-top: 0;
 }
 footer .fBottom::before{
   content: '';
   display: block;
-  margin-top: 60%;
+  margin-top: 30%;
 }
 .fBottom p{
   font: 300 1.3rem/1.5em var(--basicFont);  
