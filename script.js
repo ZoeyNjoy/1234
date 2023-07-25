@@ -39,7 +39,7 @@ $(function(){
     loop:true
   });
   anime({
-    targets: '.home .mscl',
+    targets: '.mscl',
     translateY: [-25, 0],
     opacity:[0, 1],
     delay:100,

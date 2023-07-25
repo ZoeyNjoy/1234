@@ -11,7 +11,12 @@ header .h_wrap{
 #header .m_inner{
   display: block;
 }
-
+header .logo{
+  width: 30%;
+  height: 30px;
+  z-index: 200;
+  overflow: hidden;
+}
 /* 햄버거바 */
 header .bar{
   display: block;
@@ -326,7 +331,7 @@ footer .fBottom{
   min-width: 320px;
 }
 .headerwrap .logo{
-  width: 25%;
+  width: 30%;
 }
 /* 서브메인 */
 .mainwrap{
