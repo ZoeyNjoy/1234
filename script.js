@@ -166,8 +166,8 @@ $('main .works').each(function(){
 
 // 사진 클릭 풀화면
 let popup = document.querySelectorAll('.design a');
-let popupFull = document.querySelectorAll('.design .full');
-let popupClose = document.querySelectorAll('.design .full');
+let popupFull = document.querySelectorAll('.design .fullwrap');
+let popupClose = document.querySelectorAll('.design .fullwrap');
 
 for(let s of popupFull){s.style.display='none'};
 

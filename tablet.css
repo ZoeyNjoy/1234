@@ -85,25 +85,6 @@ main .skill{
 
 /* works */
 main .works{
-  margin-top: 250px;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  box-sizing: border-box;
-  background-color: var(--bgColor);
-}
-.works .cate{
-  width: calc(100% - 48px);
-}
-.works .menu_list{
-  width: calc(100% - 48px);
-}
-
-
-
-
-
-/* works */
-main .works{
   width: 100%;
   margin-top: 300px;
   padding-top: 150px;
@@ -112,9 +93,7 @@ main .works{
   background-color: var(--bgColor);
 }
 .works .cate{
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
+  width: calc(100% - 48px);
 }
 .cate a{
   display: block;
@@ -127,11 +106,7 @@ main .works{
   transition: all .3s;
 }
 .works .menu_list{
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
+  width: calc(100% - 48px);
 }
 .menu_list .worksMenu{
   width: 100%;
@@ -166,6 +141,12 @@ main .works{
   transition: all .2s;
 }
 
+
+/* full */
+.fullwrap .full .cont{
+  width: 90%;
+  height: 60%;
+}
 
 
 
