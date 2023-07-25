@@ -145,14 +145,7 @@ $('main .works').each(function(){
     tab.removeClass("active");
     $(this).addClass("active");
     cont.removeClass("active");
-    cont.eq(ind).addClass(
-      anime({
-        targets: '.worksList',
-        translateX: [-10, 0],    
-        scaleX: [0, 1],
-        easing: 'easeInExpo',
-        duration:200
-      }));
+    cont.eq(ind).addClass();
     cont.hide();
     btn.hide();
     cont.eq(ind).show();
@@ -182,14 +175,12 @@ popup.forEach(function(i){
   i.addEventListener('click',function(e){
     e.preventDefault()
     this.nextElementSibling.style.display='block';
-    // document.getElementsByTagName('body')[0].style.overflow = 'hidden';
     $('#header').removeClass('fixed');      
   })
 });
 popupClose.forEach(function(i){
   i.addEventListener('click',function(){
     this.style.display='none'
-    // document.getElementsByTagName('body')[0].style.overflow = 'visible';
     $('#header').addClass('fixed');
   })
 });
